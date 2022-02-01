@@ -1,6 +1,8 @@
 html {
-  height: 100vh;
+  height: 100%;
   width: 100vw;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -12,13 +14,18 @@ body {
     hsl(240, 73%, 65%)
   );
   background-size: cover;
+  background-attachment: fixed;
   font-family: "Kumbh Sans", sans-serif !important;
   font-size: 12px !important;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: centre;
   align-items: center;
+}
+
+.everything {
+  height: 100%;
 }
 
 .flexbox_container {
@@ -33,25 +40,30 @@ body {
 }
 
 .image {
-  height: 520px;
+  height: 480px;
   width: 520px;
   border-radius: 10px 0 0 10px;
   background-color: white;
   background-image: url("images/bg-pattern-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: -300px 0px;
+  background-position: -145px 0px;
 }
 
-.woman-image {
+.woman-image-div {
   position: relative;
-  margin: 5% 50% 0 0;
-  z-index: 1;
+  margin-left: -6rem;
+  margin-top: 2rem;
+  /* z-index: 1; */
+}
+
+.box-image {
+  margin-top: -13.5rem;
 }
 
 .faq-section {
-  padding: 50px 50px 20px 0;
-  height: 520px;
+  padding: 50px 50px 0px 0;
+  height: 480px;
   width: 520px;
   text-align: left;
   border-radius: 0 10px 10px 0;
@@ -74,12 +86,55 @@ body {
   color: hsl(14, 88%, 65%);
 }
 
+.woman-image-mobile {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+     
+
 @media (max-width: 1040px) {
+  .flexbox_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .image {
     border-radius: 10px 10px 0 0;
+    height: 200px;
+    padding: 0;
+    height: 100px;
+    margin: 50px 0 0 0;
+    width: 400px;
   }
 
   .faq-section {
     border-radius: 0 0 10px 10px;
+    padding: 0;
+    height: 400px;
+    width: 400px;
+  }
+
+  .woman-image,
+  .box-image {
+    display: none;
+  }
+
+  .woman-image-mobile {
+    display: block;
+    margin: -10rem 0 0 9rem;
+    width: 60%;
+  }
+
+  .image {
+    background-position: -20px -350px;
   }
 }
